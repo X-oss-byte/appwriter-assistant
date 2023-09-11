@@ -8,8 +8,7 @@ from bs4 import BeautifulSoup
 import re
 
 def extract_hrefs(html_code):
-    hrefs = re.findall(r'href=["\'](.*?)["\']', html_code)
-    return hrefs
+    return re.findall(r'href=["\'](.*?)["\']', html_code)
 
 def get_appwrite_data(url: str):
     print(f"Getting data from {url}...")
